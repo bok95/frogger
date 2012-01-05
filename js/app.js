@@ -22,7 +22,7 @@ Frogger.searchResults = Ember.ArrayController.create({
     var id = tweet.get("id");
 
     if (typeof this._idCache[id] === "undefined") {
-      this.pushObject(tweet);
+      this.insertAt(0, tweet);
       this._idCache[id] = tweet.id;
     }
   },
