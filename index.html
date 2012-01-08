@@ -15,6 +15,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/frogger.css">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,14 +25,17 @@
   <section>
     <div class="container">
       <script type="text/x-handlebars">
-        {{view Frogger.changeQueryView
-          placeholder = "Search on Twitter ..."}}
+        <div id="input_query">
+          {{view Frogger.changeQueryView
+            placeholder = "Search on Twitter ..."}}
+        </div>
 
-        <ul>
         {{#each Frogger.searchResults}}
-          <li>{{text}}</li>
+          <div class="tweet">
+            <img {{bindAttr src="profile_image_url"}}>
+            {{text}}
+          </div>
         {{/each}}
-        </ul>
       </script>
     </div>
   </section>

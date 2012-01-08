@@ -1,0 +1,14 @@
+#input_query {
+  margin-top: 5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.container ul {
+  list-style-type: none;
+}
+
+.tweet {
+  background: #ccc;
+  margin-bottom: 1em; 
+}
